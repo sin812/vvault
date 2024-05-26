@@ -1,0 +1,349 @@
+/* 
+
+COLORS 
+Background;#F78C58 #abb9e9 #F5F5DC
+Tints 
+Shades 
+Accents 
+Greys
+END OF COLORS 
+
+SHADOWS
+END OF SHADOWS
+
+BORDER
+
+150px;
+
+END OF BORDER
+
+SPACE
+END OF SPACE
+
+*/ 
+
+
+
+
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    
+}
+
+.title{
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color:red;
+    letter-spacing: 2px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+
+body{
+background-color: #F5F5DC;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+line-height: 1.5;
+font-weight: 300;    
+
+}
+
+
+/* HEADER */
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    background-color: #ff0000;
+    margin-top: rem;
+    padding:0 2rem;
+    height:6rem;
+    /* sticky */
+}
+
+.logo{
+    
+        height: 4rem;
+        margin-top: 1.1rem;
+
+}
+
+/* NAV */
+
+.navlist{
+
+    list-style:none;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap:3rem;
+    text-decoration: none;
+
+}
+
+
+.mainnavlink:link, .mainavlink:visited {
+        text-decoration: none;
+        margin-top: 2rem; /* Adjust the margin-top value to center the link in the header */
+        color:#000000;
+        font-weight: 100;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+}
+
+
+.mainnavlink:hover, .mainavlink:active{
+
+color:#fafafa
+
+}
+
+.mainnavlink.topdonate:link, .mainavlink.topdonate:visited{
+
+    padding: 0.5rem 1.7rem;
+    margin-right: 1rem;
+    border-radius: 150px;
+    background-color: #000000;
+    color:#F5F5DC;
+
+
+}
+
+
+/* INTRO */
+
+.introtext{
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+}
+
+.intro{
+    background-color: #F5F5DC;
+    padding:0 2rem;
+    margin: 0auto;
+    max-width: 130rem;
+    display:grid;
+    gap: 9.6rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.intropic{
+    width: 100%;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+    border: 3px solid red;
+    
+    
+}
+
+.intropic2{
+
+    width: 80%;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+
+}
+
+
+.button:link, .button:visited{ 
+    background-color: #050505;
+    font-size:1.2rem ;
+    color: #F5F5DC;
+    padding: 1rem 2.5rem;
+    border-radius: 150px;
+    position: relative;
+    top:-20px;
+    transition: all 1s;
+    margin-right: 0.5rem;
+    border: 3px solid red;
+
+}
+
+.picintrobox2{
+
+    margin-top: 2rem;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+
+}
+
+/* BUTTON */
+
+.buttonchange:hover, .buttonchange:active{
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: inset 0 0 0 3px white ;
+}
+
+/* INSTRUCTIONS*/
+
+.instructions {
+
+    padding: 9px 0;
+    background-color: #F5F5DC;
+
+}
+
+
+
+
+
+/*  REUSABLE GRID */
+
+.container {
+
+    padding: 0 3.2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+.grid{
+
+display: grid;
+gap: 9rem;
+
+}
+
+.grid-2{
+
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+.grid-4{
+
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+
+
+.instructions div div {
+
+    padding: 100px;
+    font-size: 50px;
+    color:#000000;
+    /* background-color:#F78C58;*/
+}
+
+
+.type2heading{
+
+color:red;
+letter-spacing: 1px;
+font-weight: 5.2rem;
+font-size: 3rem;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+    
+}
+
+.subheading{
+
+    letter-spacing: 1px;
+    font-weight: 5.2rem;
+    font-size: 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* END OF REUSABLE GRID */
+
+
+/* HOW TO SECTION */
+
+.howtoimg {
+
+    width: 60%;
+    border-radius: 10px;
+    border: 3px solid red;
+
+}
+
+.stepdescr {
+
+
+    font-size: 2rem;
+
+}
+
+
+.step{
+
+    color: red;
+    font-size:  9rem;
+
+}
+
+/* END OF HOW TO SECTION */
+
+/* FOOTER*/
+
+.footer{
+
+padding: 4rem 0;
+background-color: #ff0000;
+
+}
+
+.sociallogo{
+
+    height: 2rem;
+    display: box;
+    gap: 2.4rem;
+    list-style: none;
+
+}
+
+.footertitle{
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+
+.link:link, .link:visited {
+
+    text-decoration: none;
+
+}
+
+.socials{
+
+    list-style: none;
+    display:flex;
+    gap:2rem;
+
+}
+
+.address{
+    font-size: 1.3rem;
+}
+
+.copyright{
+
+    font-size:1.3rem;
+
+}
