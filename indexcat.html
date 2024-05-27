@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="homestyle.css" rel="stylesheet"/>
+    <title>Catalog</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to add data to the list
+            function addData() {
+                var inputData = $('#dataInput').val();
+                if (inputData !== '') {
+                    var listItem = $('<li>').text(inputData);
+                    $('#dataList').append(listItem);
+                    $('#dataInput').val('');
+                }
+            }
+
+            // Event listener for the add button
+            $('#addButton').click(function() {
+                addData();
+            });
+
+            // Event listener for the enter key
+            $('#dataInput').keypress(function(event) {
+                if (event.which === 13) {
+                    addData();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#"> 
+             <img class="logo" alt="Ye Vault Logo" src="pics/logo.jpg" />
+        </a>
+        <nav class="mainnav">
+            <ul class="navlist">
+                <li><a class="mainnavlink" href="#"> About Us </a></li>
+                <li><a class="mainnavlink" href="#"> Catalog </a></li>
+                <li><a class="mainnavlink topdonate" href="#"> Buy Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <h1>Catalog</h1>
+    <input type="text" id="dataInput" placeholder="Enter data">
+    <button id="addButton">Add</button>
+    <ul id="dataList"></ul>
+
+
+    
+    <footer class="footer2"> 
+    
+        <div class="container grid grid-3">
+
+            <div class="logospace">
+                <a href="#"> 
+                    <img class="logo" alt="V Vault Logo" src="pics/logo.jpg" />
+                </a>
+
+                <!--<ul class="socials">
+                    <li>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </li>
+
+                    <li>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    </li>
+                </ul> -->
+
+                <ul class="socials">
+                    <li>
+                        <a class="link" href="#"><img class="sociallogo" alt="twitter logo" src="pics/logo-twitter.svg"></a>
+                    </li>
+
+                    <li>
+                        <a class="link" href="#"><img class="sociallogo" alt="facebook logo" src="pics/logo-facebook.svg"></a>
+                    </li>
+
+                    <li>
+                        <a class="link" href="#"><img class="sociallogo" alt="insta logo" src="pics/logo-instagram.svg"></a>
+                    </li>
+                </ul> 
+            </div>
+
+            <div class="addressspace">
+
+                <p class="footertitle">Contact Us</p>
+                <p class="address">
+                    Karaiskaki 134, Patra 262 21</p>
+                    <a href="tel:21 0600 9800"> 21 0600 9800 </a></br>
+                    <a href="mailto:vvault@gmail.com"> vvault@gmail.com </a>
+                </address>
+
+            </div>
+
+            <div class="copyright">
+                <p class="footertitle">Copyright </p>
+                
+                <p class="copyright"> &copy; 2024 V Vault, Inc. All Rights Reserved</p></div>
+
+        </div>
+    
+    </footer>
+
+</body>
+</html>
