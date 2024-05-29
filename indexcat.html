@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href= 
+"http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> 
     <link href="homestyle.css" rel="stylesheet"/>
+
     <title>Catalog</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -10,10 +13,11 @@
             function addData() {
                 var inputData = $('#dataInput').val();
                 if (inputData !== '') {
-                    var listItem = $('<li>').text(inputData);
+                    var listItem = $('<td>').text(inputData);
                     $('#dataList').append(listItem);
                     $('#dataInput').val('');
                 }
+                
             }
 
             // Event listener for the add button
@@ -33,33 +37,78 @@
 <body>
 
     <header class="header">
-        <a href="#"> 
+        <a href="home.html"> 
              <img class="logo" alt="Ye Vault Logo" src="pics/logo.jpg" />
         </a>
         <nav class="mainnav">
             <ul class="navlist">
                 <li><a class="mainnavlink" href="#"> About Us </a></li>
-                <li><a class="mainnavlink" href="#"> Catalog </a></li>
+                <li><a class="mainnavlink" href="indexcat.html"> Catalog </a></li>
                 <li><a class="mainnavlink topdonate" href="#"> Buy Now</a></li>
             </ul>
         </nav>
     </header>
 
-
-
     <h1>Catalog</h1>
     <input type="text" id="dataInput" placeholder="Enter data">
     <button id="addButton">Add</button>
-    <ul id="dataList"></ul>
+    <table id="dataList"></table>
+
+    
+
+    <div class="container">
+        <form action="action_page.php">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+
 
 
     
-    <footer class="footer2"> 
+    <footer class="footer catalog"> 
     
         <div class="container grid grid-3">
 
             <div class="logospace">
-                <a href="#"> 
+                <a href="home.html"> 
                     <img class="logo" alt="V Vault Logo" src="pics/logo.jpg" />
                 </a>
 
