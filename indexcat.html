@@ -22,56 +22,71 @@
     </header>
 
     <h1 class="indextitle">Catalog</h1>
-
+    <button class="opener" id="openPopup">Add Album</button>    
 
     
 
-    <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-overlay" id="popupOverlay" >
 
       <div class="popup" id="popup">
   
           <span class="close" id="closePopup">&times;</span>
   
-      <div class="pop-up content">
-        <form action="action_page.php">
+      <div class="pop-up content" >
+
           <div class="row">
           <div class="col-25">
-            <label for="fname">Album Name</label>
+            <label for="name">Album Name</label>
           </div>
+          
           <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input type="text" id="albname" name="albumname" placeholder="Type Name" required>
           </div>
           </div>
+
           <div class="row">
           <div class="col-25">
-            <label for="lname">Year Released</label>
+            <label for="yreleased">Year Released</label>
           </div>
+
           <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="text" id="albyear" name="albumyear" placeholder="Type Year" required>
           </div>
           </div>
+
           <div class="row">
           <div class="col-25">
-            <label for="country">Genre</label>
+            <label for="Genre">Genre</label>
           </div>
+
           <div class="col-75">
-            <select id="country" name="country">
-            <option value="australia">Rock</option>
-            <option value="canada">Pop</option>
-            <option value="usa">Rap</option>
+            <select  name="albumgenre"  id="albgenre" required>
+                <option value="Rock" id="albgenre">Rock</option>
+                <option value="Pop" id="albgenre">Pop</option>
+                <option value="Rap" id="albgenre">Rap</option>
             </select>
           </div>
           </div>
         
           <div class="row">
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" id="submitButton" >
           </div>
-        </form>
         </div>
   
       </div>
   
   </div>
+
+
+
+
+  <table class="albums" id="table">
+    <tr>
+        <th>Album Name</th>
+        <th>Year Released</th>
+        <th>Genre</th>
+    </tr>
+</table>
 
       
 
@@ -86,19 +101,7 @@
                     <img class="logo" alt="V Vault Logo" src="pics/logo.jpg" />
                 </a>
 
-                <!--<ul class="socials">
-                    <li>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    </li>
 
-                    <li>
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    </li>
-                </ul> -->
 
                 <ul class="socials">
                     <li>
