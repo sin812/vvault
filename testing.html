@@ -1,87 +1,50 @@
-<!DOCTYPE html> 
-<html> 
+<link href="style.css" rel="stylesheet"/>
 
-<head> 
-	<link rel="stylesheet" href= 
-"http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> 
+<div class="popup-overlay" id="popupOverlay">
 
-	<script src= 
-		"http://code.jquery.com/jquery-1.11.1.min.js"> 
-	</script> 
+    <div class="popup" id="popup">
 
-	<script src= 
-"http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"> 
-	</script> 
-</head> 
+        <span class="close" id="closePopup">&times;</span>
 
-<body> 
-	<center> 
-		<h1>GeeksforGeeks</h1> 
+		<div class="pop-up content">
+			<form action="action_page.php">
+			  <div class="row">
+				<div class="col-25">
+				  <label for="fname">Album Name</label>
+				</div>
+				<div class="col-75">
+				  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-25">
+				  <label for="lname">Year Released</label>
+				</div>
+				<div class="col-75">
+				  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-25">
+				  <label for="country">Genre</label>
+				</div>
+				<div class="col-75">
+				  <select id="country" name="country">
+					<option value="australia">Rock</option>
+					<option value="canada">Pop</option>
+					<option value="usa">Rap</option>
+				  </select>
+				</div>
+			  </div>
+		  
+			  <div class="row">
+				<input type="submit" value="Submit">
+			  </div>
+			</form>
+		  </div>
 
-		<h4> 
-			Design Form popup using jQuery Mobile 
-		</h4> 
+    </div>
 
-		<a href="#FormDesign" data-rel="popup"
-			data-position-to="window"
-			class="ui-btn ui-corner-all ui-shadow 
-			ui-btn-inline ui-icon-check 
-			ui-btn-icon-left ui-btn-a" 
-			data-transition="pop">Form 
-		</a> 
-		
-		<div data-role="popup" id="FormDesign"
-			data-theme="a" class="ui-corner-all"> 
-			
-			<form> 
-				<div style="padding:10px 20px;"> 
-					<h3>GeeksforGeeks Login Form</h3> 
+</div>
 
-					<label for="un" class="ui-hidden-accessible"> 
-						First Name:         
-					</label> 
-					
-					<input type="text" name="user" id="un" value=""
-						placeholder="Enter First Name" data-theme="a"> 
-
-					<label for="un" class="ui-hidden-accessible"> 
-						Last Name: 
-					</label> 
-					
-					<input type="text" name="user" id="un" value=""
-						placeholder="Enter Last Name" data-theme="a"> 
-
-					<label for="un" class="ui-hidden-accessible"> 
-						Username: 
-					</label> 
-					
-					<input type="text" name="user" id="un" value=""
-						placeholder="Enter Username" data-theme="a"> 
-
-					<label for="pw" class="ui-hidden-accessible"> 
-						Password: 
-					</label> 
-					
-					<input type="password" name="pass" id="pw" value=""
-						placeholder="Enter Password" data-theme="a"> 
-
-					<label for="pw" class="ui-hidden-accessible"> 
-						Confirm Password: 
-					</label> 
-					
-					<input type="password" name="pass" id="pw"
-						value="" placeholder="Enter Confirm Password"
-						data-theme="a"> 
-
-					<button type="submit"
-						class="ui-btn ui-corner-all ui-shadow 
-						ui-btn-b ui-btn-icon-left ui-icon-check"> 
-						Sign UP 
-					</button>	 
-				</div> 
-			</form> 
-		</div> 
-	</center> 
-</body> 
-
-</html>
+<script src="script.js"></script>
