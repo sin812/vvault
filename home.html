@@ -1,25 +1,31 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=style.css> 
     <link href="homestyle.css" rel="stylesheet"/>
     <title>V Vault</title>
     
 
 </head>
-<body>
-    <header class="header">
-        <a href="indexcat.html"> 
+
+
+
+<body class>
+
+    <header class="header sticky">
+        <a href="home.html"> 
              <img class="logo" alt="Ye Vault Logo" src="pics/logo.jpg" />
         </a>
         <nav class="mainnav">
             <ul class="navlist">
-                <li><a class="mainnavlink" href="#"> About Us </a></li>
+                <li><a class="mainnavlink" href="Contact.html"> Contact </a></li>
                 <li><a class="mainnavlink" href="indexcat.html"> Catalog </a></li>
-                <li><a class="mainnavlink topdonate" href="#"> Buy Now</a></li>
+                <li><button class="darkbutton" id="darkModeButton">DARK MODE</button></li>
             </ul>
         </nav>
     </header>
@@ -121,19 +127,6 @@
                     <img class="logo" alt="V Vault Logo" src="pics/logo.jpg" />
                 </a>
 
-                <!--<ul class="socials">
-                    <li>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    </li>
-
-                    <li>
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    </li>
-                </ul> -->
 
                 <ul class="socials">
                     <li>
@@ -170,4 +163,17 @@
     
     </footer>
 </body>
+
+<script>
+    function toggleDarkMode() {
+            var introSection = document.querySelector(".intro");
+            var instructionsSection = document.querySelector(".instructions");
+            introSection.classList.toggle("dark-mode");
+            instructionsSection.classList.toggle("dark-mode");
+        }
+        var darkModeButton = document.getElementById("darkModeButton");
+        darkModeButton.addEventListener("click", toggleDarkMode);
+</script>
+
+
 </html>

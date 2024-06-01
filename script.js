@@ -105,5 +105,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // You can customize and expand these functions based on your specific requirements.
 
+    function showNotification() {
+        const useremail = document.getElementById("email").value;
+        const username = document.getElementById("username").value;
+        const userphone = document.getElementById("phone").value;
+        const usertext = document.getElementById("message").value;
+
+        const notification = document.createElement('div');
+        notification.textContent = `Email: ${useremail}, Phone: ${userphone}, Message: ${usertext}, ${username}'s message has been sent successfully!`;
+        notification.classList.add('notification');
+
+        document.body.appendChild(notification);
+
+        setTimeout(function() {
+            document.body.removeChild(notification);
+        }, 6000);
+    }
+
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.instructions.classList.toggle('dark-mode');
+    }
+
+    // Add event listener to the dark mode button
+    
+
+    function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+
+        // Event listener for dark mode button
+        var darkModeButton = document.getElementById("darkModeButton");
+        darkModeButton.addEventListener("click", toggleDarkMode);
+
+
 });
+
+
+
 
