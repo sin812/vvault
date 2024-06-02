@@ -64,9 +64,20 @@
             </div>
 
             
+            
 
         
     </section>
+
+    <div class="carousel">
+		<img class="carouselimg" src="/catalog.jpg" alt="record player">
+		<button class="button left" id="prevButton">
+			&lt;
+		</button>
+		<button class="button right" id="nextButton">
+			&gt;
+		</button>
+	</div>
 
     <section class="instructions"> 
         <div class="container">
@@ -164,6 +175,8 @@
     </footer>
 </body>
 
+
+<!-- Dark Mode Script  NOTE TO ASK: WOULD NOT WORK WITH THE SCRIPT FILE-->
 <script>
     function toggleDarkMode() {
             var introSection = document.querySelector(".intro");
@@ -174,6 +187,8 @@
         var darkModeButton = document.getElementById("darkModeButton");
         darkModeButton.addEventListener("click", toggleDarkMode);
 </script>
+
+<script src="carousel.js"> </script>
 
 
 </html>

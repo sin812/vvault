@@ -122,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 6000);
     }
 
+    
+    submitButton.addEventListener('click', showNotification);
+
 
     // Function to toggle dark mode
     function toggleDarkMode() {

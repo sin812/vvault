@@ -1,50 +1,24 @@
-<link href="style.css" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="homestyle.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="carousel">
+		<img class="carouselimg" src="/catalog.jpg" alt="record player">
 
-<div class="popup-overlay" id="popupOverlay">
+		<button class="button left" id="prevButton">
+			&lt;
+		</button>
+		<button class="button right" id="nextButton">
+			&gt;
+		</button>
+	</div>
 
-    <div class="popup" id="popup">
+	
+</body>
 
-        <span class="close" id="closePopup">&times;</span>
+<script src="carousel.js"> </script>
+</html>
 
-		<div class="pop-up content">
-			<form action="action_page.php">
-			  <div class="row">
-				<div class="col-25">
-				  <label for="fname">Album Name</label>
-				</div>
-				<div class="col-75">
-				  <input type="text" id="fname" name="firstname" placeholder="Your name..">
-				</div>
-			  </div>
-			  <div class="row">
-				<div class="col-25">
-				  <label for="lname">Year Released</label>
-				</div>
-				<div class="col-75">
-				  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-				</div>
-			  </div>
-			  <div class="row">
-				<div class="col-25">
-				  <label for="country">Genre</label>
-				</div>
-				<div class="col-75">
-				  <select id="country" name="country">
-					<option value="australia">Rock</option>
-					<option value="canada">Pop</option>
-					<option value="usa">Rap</option>
-				  </select>
-				</div>
-			  </div>
-		  
-			  <div class="row">
-				<input type="submit" value="Submit">
-			  </div>
-			</form>
-		  </div>
-
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+	
