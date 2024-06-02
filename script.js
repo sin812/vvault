@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     submitButton.addEventListener('click', showNotification);
+    submitButton.addEventListener("click", closePopupFunc);
 
 
     // Function to toggle dark mode
@@ -143,8 +144,21 @@ document.addEventListener('DOMContentLoaded', function () {
         // Event listener for dark mode button
         var darkModeButton = document.getElementById("darkModeButton");
         darkModeButton.addEventListener("click", toggleDarkMode);
+        
+        
+        function sortTableByYear() {
+            const table = document.getElementById('table');
+            const rows = Array.from(table.rows).slice(1); // Exclude the header row
+            rows.sort((a, b) => {
+            const yearA = parseInt(a.cells[1].textContent);
+            const yearB = parseInt(b.cells[1].textContent);
+            return yearB - yearA; // Sort in descending order
+            });
+            rows.forEach(row => table.appendChild(row));
+        }
 
-
+        const sortButton = document.getElementById('sortButton');
+        sortButton.addEventListener('click', sortTableByYear);
 });
 
 
