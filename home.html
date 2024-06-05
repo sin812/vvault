@@ -64,6 +64,8 @@
             </div>
 
             
+
+            
             
 
         
@@ -77,7 +79,22 @@
 		<button class="button right" id="nextButton">
 			&gt;
 		</button>
+
+        
 	</div>
+
+    <div class="container greetingcard">
+        <div class="card" style="width: 18rem;">
+            <img src="questions.jpeg" class="cardimg" alt="Greeting Card Image">
+            <div class="card-body">
+                <h5 class="card-title">Any Questions?</h5>
+                <p class="card-text">Just shoot us a message!</p>
+                <a href="contact.html" class="btn btn-primary">Contact</a>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <section class="instructions"> 
         <div class="container">
@@ -181,9 +198,16 @@
     function toggleDarkMode() {
             var introSection = document.querySelector(".intro");
             var instructionsSection = document.querySelector(".instructions");
+            var greetingcardSection = document.querySelector(".greetingcard");
+            var carouselSection = document.querySelector(".carousel");
+            var themain = document.querySelector("main");
             introSection.classList.toggle("dark-mode");
             instructionsSection.classList.toggle("dark-mode");
+            carouselSection.classList.toggle("dark-mode");
+            greetingcardSection.classList.toggle("dark-mode");
+            themain.classList.toggle("dark-mode");
         }
+
         var darkModeButton = document.getElementById("darkModeButton");
         darkModeButton.addEventListener("click", toggleDarkMode);
 </script>

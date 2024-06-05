@@ -1,17 +1,10 @@
 .popup-overlay {
-
     display: none;
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 100%;
-
     background: rgba(0, 0, 0, 0.5);
 
 }
@@ -19,21 +12,13 @@
 .popup {
 
 font-family: Arial, sans-serif;
-
     position: absolute;
-
     top: 50%;
-
     left: 50%;
-
     transform: translate(-50%, -50%);
-
     background: #fff;
-
     padding: 20px;
-
     border-radius: 8px;
-
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
 }
@@ -45,47 +30,30 @@ font-family: Arial, sans-serif;
 }
 
 .popup .close {
-
     position: absolute;
-
     top: 10px;
-
     right: 10px;
-
     font-size: 20px;
-
     cursor: pointer;
-
     color: #333;
 
 }
 
 .popup #emailInput {
-
     width: 80%;
-
     padding: 10px;
-
     margin: 10px 0;
-
     border: 1px solid #ddd;
-
     border-radius: 4px;
 
 }
 
 .popup button {
-
     background-color: #4caf50;
-
     color: #fff;
-
     padding: 10px 20px;
-
     border: none;
-
     border-radius: 4px;
-
     cursor: pointer;
 
     font-size: 16px;
@@ -155,9 +123,19 @@ font-family: Arial, sans-serif;
 
 .darkbutton{   
 
+    text-decoration: none;
     background-color: #050505;
     font-size:1.2rem ;
     color: #F5F5DC;
+    padding: 1rem 1rem;
+    border-radius: 150px;
+    position: relative;
+    top:-20px;
+    transition: all 1s;
+    margin-right: 0.5rem;
+    border: 3px solid red;
+
+    
 }
 
 .dark-mode {

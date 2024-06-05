@@ -207,10 +207,33 @@ color:#fafafa
         justify-content: center;
         align-items: center;
     
-
 }
 
 /* END OF INTRO */
+
+.greetingcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.card{
+    
+        border: 3px solid red;
+        background-color: aqua;
+      
+}
+
+.cardimg{
+
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5rem;
+
+
+
+
+}
 
 /* BUTTON */
 
@@ -345,18 +368,14 @@ align-items: center;
 }
 
 .stepdescr {
-
-
     font-size: 2rem;
 
 }
 
 
 .step{
-
     color: red;
     font-size:  9rem;
-
 }
 
 /* END OF HOW TO SECTION */
@@ -511,6 +530,8 @@ background-color: red;
 .button.right {
     right: 10px;
 }
+
+/* END OF CAROUSEL */
 
 
 
