@@ -1,48 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
-
+    // Get references to DOM elements
     const popupOverlay = document.getElementById('popupOverlay');
-
     const popup = document.getElementById('popup');
-
     const closePopup = document.getElementById('closePopup');
 
-
-
-
-
-
-
     // Function to open the popup
-
     function openPopup() {
-        
-        popupOverlay.style.display = 'block';
-
+        popupOverlay.style.display = 'block'; // Display the overlay and popup
     }
 
     // Function to close the popup
-
     function closePopupFunc() {
-
-        popupOverlay.style.display = 'none';
-
+        popupOverlay.style.display = 'none'; // Hide the overlay and popup
     }
 
-    
+    // Function to store values (currently unused, but can be expanded)
     function storeValues() {
-      const albumName = document.getElementById("albname").value;
-      const yearReleased = document.getElementById("albyear").value;
-      const genre = document.getElementById("albgenre").value;
+        const albumName = document.getElementById("albname").value;
+        const yearReleased = document.getElementById("albyear").value;
+        const genre = document.getElementById("albgenre").value;
     }
 
     // Function to handle form submission
-    
     function handleSubmit(event) { 
-        event.preventDefault(); // Prevent form from submitting and refreshing the page
+        event.preventDefault(); // Prevent the form from submitting and refreshing the page
         
-          const albumName = document.getElementById("albname").value;
+        // Get input values
+        const albumName = document.getElementById("albname").value;
         const yearReleased = document.getElementById("albyear").value;
-        const genre = document.getElementById("albgenre").value; 
+        const genre = document.getElementById("albgenre").value;
+
         // Create a new row in the table
         const table = document.getElementById('table');
         const newRow = table.insertRow();
@@ -72,39 +59,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add event listener to the form submit button
     const submitButton = document.getElementById('submitButton');
-    submitButton.addEventListener('click', storeValues);
-    submitButton.addEventListener('click', handleSubmit);
-    
-
+    submitButton.addEventListener('click', storeValues); // Store values (currently unused)
+    submitButton.addEventListener('click', handleSubmit); // Handle form submission
 
     // Event listeners
-
-    // Trigger the popup to open (you can call this function on a button click or any other event)
-
-    openPopup();
+    openPopup(); // Automatically open the popup for demonstration purposes
 
     // Close the popup when the close button is clicked
-
     closePopup.addEventListener('click', closePopupFunc);
 
     // Close the popup when clicking outside the popup content
-
     popupOverlay.addEventListener('click', function (event) {
-
         if (event.target === popupOverlay) {
-
             closePopupFunc();
-
         }
-
     });
 
+    // Open the popup when the "Contact Form" button is clicked
     document.getElementById('openPopup').addEventListener('click', function() {
         openPopup();
-    })
+    });
 
-    // You can customize and expand these functions based on your specific requirements.
-
+    // Function to show a notification with user input details
     function showNotification() {
         const useremail = document.getElementById("email").value;
         const username = document.getElementById("username").value;
@@ -117,50 +93,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.body.appendChild(notification);
 
+        // Remove the notification after 6 seconds
         setTimeout(function() {
             document.body.removeChild(notification);
         }, 6000);
     }
 
-    
+    // Add event listeners to show the notification and close the popup upon form submission
     submitButton.addEventListener('click', showNotification);
     submitButton.addEventListener("click", closePopupFunc);
-
 
     // Function to toggle dark mode
     function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
-        document.instructions.classList.toggle('dark-mode');
     }
 
     // Add event listener to the dark mode button
-    
+    var darkModeButton = document.getElementById("darkModeButton");
+    darkModeButton.addEventListener("click", toggleDarkMode);
 
-    function toggleDarkMode() {
-            var body = document.body;
-            body.classList.toggle("dark-mode");
-        }
-
-        // Event listener for dark mode button
-        var darkModeButton = document.getElementById("darkModeButton");
-        darkModeButton.addEventListener("click", toggleDarkMode);
-        
-        
-        function sortTableByYear() {
-            const table = document.getElementById('table');
-            const rows = Array.from(table.rows).slice(1); // Exclude the header row
-            rows.sort((a, b) => {
+    // Function to sort the table by year in descending order
+    function sortTableByYear() {
+        const table = document.getElementById('table');
+        const rows = Array.from(table.rows).slice(1); // Exclude the header row
+        rows.sort((a, b) => {
             const yearA = parseInt(a.cells[1].textContent);
             const yearB = parseInt(b.cells[1].textContent);
             return yearB - yearA; // Sort in descending order
-            });
-            rows.forEach(row => table.appendChild(row));
-        }
+        });
+        rows.forEach(row => table.appendChild(row)); // Reattach rows in sorted order
+    }
 
-        const sortButton = document.getElementById('sortButton');
-        sortButton.addEventListener('click', sortTableByYear);
+    // Add event listener to the sort button
+    const sortButton = document.getElementById('sortButton');
+    sortButton.addEventListener('click', sortTableByYear);
 });
-
-
-
-

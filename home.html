@@ -1,218 +1,179 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    
+    <!-- Meta tags for character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=style.css> 
+
+    <!-- Link to external CSS files for styling -->
+    <link rel="stylesheet" href="style.css"> 
     <link href="homestyle.css" rel="stylesheet"/>
+
+    <!-- Title of the web page -->
     <title>V Vault</title>
-    
-
 </head>
-
-
-
-<body class>
-
+<body>
+    <!-- Header section with logo and navigation links -->
     <header class="header sticky">
         <a href="home.html"> 
-             <img class="logo" alt="Ye Vault Logo" src="pics/logo.jpg" />
+            <img class="logo" alt="Ye Vault Logo" src="pics/logo.jpg" />
         </a>
         <nav class="mainnav">
             <ul class="navlist">
                 <li><a class="mainnavlink" href="Contact.html"> Contact </a></li>
-                <li><a class="mainnavlink" href="indexcat.html"> Catalog </a></li>
+                <li><a class="mainnavlink" href="catalog.html"> Catalog </a></li>
                 <li><button class="darkbutton" id="darkModeButton">DARK MODE</button></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main content of the page -->
     <main>
-
-    <section class="intro">
-        <div class="introtxtbox">
-            <h1 class="title"> 
-                V Vault
-            </h1>
-            <p class="introtext"> 
-                Welcome to <span style="color: red;">V Vault</span>, the ultimate destination for vinyl enthusiasts! 
-                At <span style="color: red;">V Vault</span>, we pride ourselves on offering an extensive and carefully curated
-                collection of vinyl records that span every genre and era. Whether you're a 
-                seasoned collector or new to the world of vinyl, our diverse selection ensures 
-                you'll find something to love. Discover the rich, authentic sound of classic 
-                albums, uncover hidden gems, and explore the latest releases. 
-                Our passionate and knowledgeable staff are here to guide you on your musical 
-                journey. Experience the timeless charm of vinyl at <span style="color: red;">V Vault</span>, 
-                where music lives on.
-            
-            <div class="picintrobox">
-                <!-- <img src="pics/IntroPic.jpg"  class="intropic" 
-                alt="Man looking through vinyls"/> -->
-
+        <!-- Introduction section with title, text, and image -->
+        <section class="intro">
+            <div class="introtxtbox">
+                <h1 class="title"> V Vault </h1>
+                <p class="introtext">
+                    Welcome to <span style="color: red;">V Vault</span>, the ultimate destination for vinyl enthusiasts! 
+                    At <span style="color: red;">V Vault</span>, we pride ourselves on offering an extensive and carefully curated
+                    collection of vinyl records that span every genre and era. Whether you're a 
+                    seasoned collector or new to the world of vinyl, our diverse selection ensures 
+                    you'll find something to love. Discover the rich, authentic sound of classic 
+                    albums, uncover hidden gems, and explore the latest releases. 
+                    Our passionate and knowledgeable staff are here to guide you on your musical 
+                    journey. Experience the timeless charm of vinyl at <span style="color: red;">V Vault</span>, 
+                    where music lives on.
+                </p>
             </div>
-                
-            </div>
-
             <div class="picintrobox2">
-                <img src="pics/vinyl-Photoroom.png-Photoroom.png"  class="intropic2" 
-                alt="a vinyl"/>
-
-                <a href="indexcat.html" class="button buttonchange" > Catalog </a>
+                <!-- Image related to vinyl records -->
+                <img src="pics/vinyl-Photoroom.png-Photoroom.png" class="intropic2" alt="a vinyl"/>
+                <a href="catalog.html" class="button buttonchange"> Catalog </a>
             </div>
+        </section>
 
-            
-
-            
-            
-
-        
-    </section>
-
-    <div class="carousel">
-		<img class="carouselimg" src="/catalog.jpg" alt="record player">
-		<button class="button left" id="prevButton">
-			&lt;
-		</button>
-		<button class="button right" id="nextButton">
-			&gt;
-		</button>
-
-        
-	</div>
-
-    <div class="container greetingcard">
-        <div class="card" style="width: 18rem;">
-            <img src="questions.jpeg" class="cardimg" alt="Greeting Card Image">
-            <div class="card-body">
-                <h5 class="card-title">Any Questions?</h5>
-                <p class="card-text">Just shoot us a message!</p>
-                <a href="contact.html" class="btn btn-primary">Contact</a>
-            </div>
-        </div>
-    </div>
-    
-    
-
-    <section class="instructions"> 
-        <div class="container">
-            <span class="subheading"> Seek the sound! </span>
-            <h2 class="type2heading"> How To: V Vault</h2>
+        <!-- Carousel section for displaying images -->
+        <div class="carousel">
+            <!-- Image of a record player -->
+            <img class="carouselimg" src="/catalog.jpg" alt="record player">
+            <!-- Carousel navigation buttons -->
+            <button class="button left" id="prevButton">&lt;</button>
+            <button class="button right" id="nextButton">&gt;</button>
         </div>
 
-        <div class="container grid grid-2">
-            
-            <!-- STEP -->
-            <div class="steptextbox">
-                <p class="step">  1. </p>
-                <h3 class="typeREheading"> Look through our Catalog!</h3>
-                <p class="stepdescr"> Just click on the catalog button on the top of our page.</p>
+        <!-- Greeting card section -->
+        <div class="container greetingcard">
+            <div class="card" style="width: 18rem;">
+                <!-- Image related to inquiries -->
+                <img src="questions.jpeg" class="cardimg" alt="Greeting Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Any Questions?</h5>
+                    <p class="card-text">Just shoot us a message!</p>
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
+                </div>
             </div>
-            
-            <div class="howtoimagebox">
-                <img src="pics/catalog.jpg" class="howtoimg1" alt="image with some arrows">
+        </div>
+        
+        <!-- Instructions section with steps on how to use the site -->
+        <section class="instructions"> 
+            <div class="container">
+                <span class="subheading"> Seek the sound! </span>
+                <h2 class="type2heading"> How To: V Vault</h2>
             </div>
 
-            <!-- STEP -->
-            <div class="steptextbox">
-
+            <div class="container grid grid-2">
+                <!-- Step 1: Look through the catalog -->
+                <div class="steptextbox">
+                    <p class="step"> 1. </p>
+                    <h3 class="typeREheading"> Look through our Catalog!</h3>
+                    <p class="stepdescr"> Just click on the catalog button on the top of our page.</p>
+                </div>
                 <div class="howtoimagebox">
-                    <img src="/pics/desire.jpg" class="howtoimg2" alt="two vinyls one of top of the other">
+                    <!-- Image showing catalog browsing -->
+                    <img src="pics/catalog.jpg" class="howtoimg1" alt="an image with a man searching through a collection of vinyls">
                 </div>
 
-                <div class="steptextbox2">
-                    <p class="step"> 3. </p>
-                    <h3 class="typeREheading"> Buy It!</h3>
-                    <p class="stepdescr"> Add it to your cart and off with your purchase.</p>
+                <!-- Step 3: Buy it -->
+                <div class="steptextbox">
+                    <div class="howtoimagebox">
+                        <!-- Image showing vinyl records -->
+                        <img src="/pics/desire.jpg" class="howtoimg2" alt="two vinyls one on top of the other">
+                    </div>
+                    <div class="steptextbox2">
+                        <p class="step"> 3. </p>
+                        <h3 class="typeREheading"> Buy It!</h3>
+                        <p class="stepdescr"> Add it to your cart and off with your purchase.</p>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- STEP -->
-            <div class="steptextbox1">
-
+                <!-- Step 2: Find what you desire -->
                 <div class="steptextbox1">
-                    <p class="step"> 2. </p>
-                    <h3 class="typeREheading">Find what you desire!</h3>
-                    <p class="stepdescr"> Scroll through the catalog or search for an item.</p>
+                    <div class="steptextbox1">
+                        <p class="step"> 2. </p>
+                        <h3 class="typeREheading">Find what you desire!</h3>
+                        <p class="stepdescr"> Scroll through the catalog or search for an item.</p>
+                    </div>
+                    <div class="howtoimagebox">
+                        <!-- Image showing vinyl records -->
+                        <img src="/pics/buyit.jpg" class="howtoimg3" alt="A packaged vinyl">
+                    </div>
                 </div>
-                
-                <div class="howtoimagebox">
-                    <img src="/pics/buyit.jpg" class="howtoimg3" alt="two vinyls one of top of the other">
-                </div>
-        </div>
-    </section>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer section with logo, contact information, and social media links -->
     <footer class="footer"> 
-    
         <div class="container grid grid-3">
-
             <div class="logospace">
                 <a href="home.html"> 
                     <img class="logo" alt="V Vault Logo" src="pics/logo.jpg" />
                 </a>
-
-
                 <ul class="socials">
                     <li>
                         <a class="link" href="#"><img class="sociallogo" alt="twitter logo" src="pics/logo-twitter.svg"></a>
                     </li>
-
                     <li>
                         <a class="link" href="#"><img class="sociallogo" alt="facebook logo" src="pics/logo-facebook.svg"></a>
                     </li>
-
                     <li>
                         <a class="link" href="#"><img class="sociallogo" alt="insta logo" src="pics/logo-instagram.svg"></a>
                     </li>
                 </ul> 
             </div>
-
             <div class="addressspace">
-
                 <p class="footertitle">Contact Us</p>
-                <p class="address">
-                    Karaiskaki 134, Patra 262 21</p>
-                    <a href="tel:21 0600 9800"> 21 0600 9800 </a></br>
-                    <a href="mailto:vvault@gmail.com"> vvault@gmail.com </a>
-                </address>
-
+                <p class="address">Karaiskaki 134, Patra 262 21</p>
+                <a href="tel:21 0600 9800"> 21 0600 9800 </a><br/>
+                <a href="mailto:vvault@gmail.com"> vvault@gmail.com </a>
             </div>
-
             <div class="copyright">
                 <p class="footertitle">Copyright </p>
-                
-                <p class="copyright"> &copy; 2024 V Vault, Inc. All Rights Reserved</p></div>
-
+                <p class="copyright"> &copy; 2024 V Vault, Inc. All Rights Reserved</p>
+            </div>
         </div>
-    
     </footer>
 </body>
 
-
-<!-- Dark Mode Script  NOTE TO ASK: WOULD NOT WORK WITH THE SCRIPT FILE-->
+<!-- Dark Mode Script to toggle dark mode on and off  NOTE: I could not make it work in the script file, it worked when I added it here though.-->
 <script>
     function toggleDarkMode() {
-            var introSection = document.querySelector(".intro");
-            var instructionsSection = document.querySelector(".instructions");
-            var greetingcardSection = document.querySelector(".greetingcard");
-            var carouselSection = document.querySelector(".carousel");
-            var themain = document.querySelector("main");
-            introSection.classList.toggle("dark-mode");
-            instructionsSection.classList.toggle("dark-mode");
-            carouselSection.classList.toggle("dark-mode");
-            greetingcardSection.classList.toggle("dark-mode");
-            themain.classList.toggle("dark-mode");
-        }
+        var introSection = document.querySelector(".intro");
+        var instructionsSection = document.querySelector(".instructions");
+        var greetingcardSection = document.querySelector(".greetingcard");
+        var carouselSection = document.querySelector(".carousel");
+        var themain = document.querySelector("main");
+        introSection.classList.toggle("dark-mode");
+        instructionsSection.classList.toggle("dark-mode");
+        carouselSection.classList.toggle("dark-mode");
+        greetingcardSection.classList.toggle("dark-mode");
+        themain.classList.toggle("dark-mode");
+    }
 
-        var darkModeButton = document.getElementById("darkModeButton");
-        darkModeButton.addEventListener("click", toggleDarkMode);
+    var darkModeButton = document.getElementById("darkModeButton");
+    darkModeButton.addEventListener("click", toggleDarkMode);
 </script>
 
-<script src="carousel.js"> </script>
-
-
+<!-- Script for carousel functionality -->
+<script src="carousel.js"></script>
 </html>

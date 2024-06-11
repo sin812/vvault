@@ -1,3 +1,4 @@
+/* Overlay for the popup, initially hidden */
 .popup-overlay {
     display: none;
     position: fixed;
@@ -5,76 +6,73 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
+/* Main popup container */
 .popup {
-
-font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Center the popup */
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Content inside the popup, centered */
 .popup-content {
-
     text-align: center;
-
 }
 
+/* Close button inside the popup */
 .popup .close {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 20px;
-    cursor: pointer;
+    cursor: pointer; /* Pointer cursor for close button */
     color: #333;
-
 }
 
+/* Email input field inside the popup */
 .popup #emailInput {
     width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
-
 }
 
+/* Button inside the popup */
 .popup button {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #4caf50; /* Green background */
+    color: #fff; /* White text */
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-
     font-size: 16px;
-
 }
 
+/* Catalog section with flexible layout */
 .catalog {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
+/* Table inside the catalog */
 .catalogtable {
     width: 80%;
     margin-top: 2rem;
 }
 
-.opener{
-
+/* Opener button for the popup */
+.opener {
     background-color: #f0f0f0;
     color: #333;
     padding: 10px 20px;
@@ -83,24 +81,25 @@ font-family: Arial, sans-serif;
     display: inline-block;
     cursor: pointer;
     margin: 0 auto;
-    display: block;
-
+    display: block; /* Center the button */
 }
 
+/* Albums table styling */
 .albums {
-
     margin-top: 2rem;
     width: 80%;
     border-collapse: collapse;
+    margin: 0 auto; /* Center the table */
 }
 
-
-.indextitle{
+/* Title styling */
+.indextitle {
     margin-top: 7rem;
     text-align: center;
     font-size: 2rem;
 }
 
+/* Contact section styling */
 .contact {
     margin-top: 1rem;
     display: flex;
@@ -109,6 +108,7 @@ font-family: Arial, sans-serif;
     text-align: center;
 }
 
+/* Notification box styling */
 .notification {
     margin: 0 auto;
     text-align: center;
@@ -117,32 +117,31 @@ font-family: Arial, sans-serif;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;;
-    
+    font-size: 16px;
 }
 
-.darkbutton{   
-
+/* Button for toggling dark mode */
+.darkbutton {
     text-decoration: none;
     background-color: #050505;
-    font-size:1.2rem ;
+    font-size: 1.2rem;
     color: #F5F5DC;
     padding: 1rem 1rem;
     border-radius: 150px;
     position: relative;
-    top:-20px;
-    transition: all 1s;
+    top: -20px;
+    transition: all 1s; /* Smooth transition */
     margin-right: 0.5rem;
     border: 3px solid red;
-
-    
 }
 
+/* Dark mode styles */
 .dark-mode {
     background-color: #333;
     color: #f5f5f5;
 }
 
+/* Alternative dark mode styles */
 .dark-mode2 {
     background-color: #000000;
     color: #00ff55;

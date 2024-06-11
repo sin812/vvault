@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="style.css"> 
+    <link href="homestyle.css" rel="stylesheet"/> 
+
+    <title>Catalog</title>
+</head>
+<body>
+
+    <!-- Header section with logo and navigation -->
+    <header class="header sticky">
+        <a href="home.html"> 
+             <img class="logo" alt="Ye Vault Logo" src="pics/logo.jpg" />
+        </a>
+        <nav class="mainnav">
+            <ul class="navlist">
+                <li><a class="mainnavlink" href="contact.html"> Contact </a></li>
+                <li><a class="mainnavlink" href="catalog.html"> Catalog </a></li>
+                <button class="darkbutton" id="darkModeButton">DARK MODE</button>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dark mode button (duplicate) -->
+    <button class="darkbutton" id="darkModeButton">DARK MODE</button>
+
+    <!-- Main title for the catalog page -->
+    <h1 class="indextitle">Catalog</h1>
+
+    <!-- Button to open the popup form for adding a new album -->
+    <button class="opener" id="openPopup">Add Album</button>    
+
+    <!-- Popup overlay for the album form -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popup">
+            <!-- Close button for the popup -->
+            <span class="close" id="closePopup">&times;</span>
+
+            <!-- Popup content with the form to add a new album -->
+            <div class="pop-up content">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="name">Album Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="albname" name="albumname" placeholder="Type Name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="yreleased">Year Released</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="albyear" name="albumyear" placeholder="Type Year" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Genre">Genre</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="albumgenre" id="albgenre" required>
+                            <option value="Rock" id="albgenre">Rock</option>
+                            <option value="Pop" id="albgenre">Pop</option>
+                            <option value="Rap" id="albgenre">Rap</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" id="submitButton">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to sort albums by year -->
+    <button class="darkbutton" id="sortButton">SORT BY YEAR</button>
+
+    <!-- Table to display the albums -->
+    <table class="albums" id="table">
+        <tr>
+            <th>Album Name</th>
+            <th>Year Released</th>
+            <th>Genre</th>
+        </tr>
+    </table>
+
+    <!-- Footer section -->
+    <footer class="footer catalog"> 
+        <div class="container grid grid-3">
+            <!-- Logo and social media links -->
+            <div class="logospace">
+                <a href="home.html"> 
+                    <img class="logo" alt="V Vault Logo" src="pics/logo.jpg" />
+                </a>
+                <ul class="socials">
+                    <li>
+                        <a class="link" href="#"><img class="sociallogo" alt="twitter logo" src="pics/logo-twitter.svg"></a>
+                    </li>
+                    <li>
+                        <a class="link" href="#"><img class="sociallogo" alt="facebook logo" src="pics/logo-facebook.svg"></a>
+                    </li>
+                    <li>
+                        <a class="link" href="#"><img class="sociallogo" alt="insta logo" src="pics/logo-instagram.svg"></a>
+                    </li>
+                </ul> 
+            </div>
+            <!-- Contact information -->
+            <div class="addressspace">
+                <p class="footertitle">Contact Us</p>
+                <p class="address">
+                    Karaiskaki 134, Patra 262 21</p>
+                    <a href="tel:21 0600 9800">21 0600 9800</a></br>
+                    <a href="mailto:vvault@gmail.com">vvault@gmail.com</a>
+                </address>
+            </div>
+            <!-- Copyright information -->
+            <div class="copyright">
+                <p class="footertitle">Copyright</p>
+                <p class="copyright">&copy; 2024 V Vault, Inc. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+</html>

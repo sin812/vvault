@@ -1,135 +1,100 @@
-/* 
-
-COLORS 
-Background;#F78C58 #abb9e9 #F5F5DC red  
-Tints 
-Shades 
-Accents 
-Greys
-END OF COLORS 
-
-SHADOWS
-END OF SHADOWS
-
-BORDER
-
-150px;
-
-END OF BORDER
-
-SPACE
-END OF SPACE
-
-*/ 
 
 
-
-
-
+/* Universal styles for all elements to remove default padding and margin */
 * {
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
-    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.title{
+/* Title styles with font size, weight, color, and spacing */
+.title {
     font-size: 5.2rem;
     font-weight: 700;
     line-height: 1.05;
-    color:red;
+    color: red;
     letter-spacing: 2px;
     margin-top: 5rem;
     margin-bottom: 3rem;
 }
 
-
-body{
-background-color: #F5F5DC;
-font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-line-height: 1.5;
-font-weight: 300;    
-
+/* Body styles with background color, font family, and line height */
+body {
+    background-color: #F5F5DC;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
-
-
+/* Table cell styles with border and padding */
 table td, table th {
     border: 1px solid black;
     padding: 0.5rem;
 }
 
-
 /* HEADER */
-.header{
 
-    display:flex;
-    justify-content:space-between;
+/* Header styles with flexbox, background color, padding, and height */
+.header {
+    display: flex;
+    justify-content: space-between;
     background-color: #ff0000;
-    margin-top: rem;
-    padding:0 2rem;
-    height:6rem;
-    /* sticky */
+    padding: 0 2rem;
+    height: 6rem;
 }
 
-.logo{
-    
-        height: 4rem;
-        margin-top: 1.1rem;
-
+/* Logo styles with height and margin */
+.logo {
+    height: 4rem;
+    margin-top: 1.1rem;
 }
 
 /* END OF HEADER */
 
 /* NAV */
 
-.navlist{
-
-    list-style:none;
+/* Navigation list styles with no list style, flexbox, alignment, and gap */
+.navlist {
+    list-style: none;
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
-    gap:3rem;
+    gap: 3rem;
     text-decoration: none;
-
 }
 
-
+/* Main navigation link styles for normal and visited states */
 .mainnavlink:link, .mainavlink:visited {
-        text-decoration: none;
-        margin-top: 2rem; /* Adjust the margin-top value to center the link in the header */
-        color:#000000;
-        font-weight: 100;
-        font-size: 1.5rem;
-        transition: all 0.3s;
+    text-decoration: none;
+    margin-top: 2rem;
+    color: #000000;
+    font-weight: 100;
+    font-size: 1.5rem;
+    transition: all 0.3s;
 }
 
-
-.mainnavlink:hover, .mainavlink:active{
-
-color:#fafafa
-
+/* Main navigation link styles for hover and active states */
+.mainnavlink:hover, .mainavlink:active {
+    color: #fafafa;
 }
 
-.mainnavlink.topdonate:link, .mainavlink.topdonate:visited{
-
+/* Specific styles for a top donate link */
+.mainnavlink.topdonate:link, .mainavlink.topdonate:visited {
     padding: 0.5rem 1.7rem;
     margin-right: 1rem;
     border-radius: 150px;
     background-color: #000000;
-    color:#F5F5DC;
-
-
+    color: #F5F5DC;
 }
 
+/* Sticky header styles for fixed positioning and box shadow */
 .sticky {
-
     position: fixed;
     top: 0;
     width: 100%;
-    height:8rem;
+    height: 8rem;
     z-index: 1000;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background-color: #ff0000;
     transition: all 0.5s;
     padding: 0 2rem;
@@ -138,187 +103,150 @@ color:#fafafa
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-
-
-
 }
 
 /* END OF NAV */
 
-
 /* INTRO */
 
-.introtext{
+/* Intro text styles with margin and font size */
+.introtext {
     margin-bottom: 3rem;
     font-size: 1.4rem;
 }
 
-.intro{
+/* Intro section styles with background color, padding, and grid layout */
+.intro {
     background-color: #F5F5DC;
-    padding:0 2rem;
-    margin: 0auto;
+    padding: 0 2rem;
+    margin: 0 auto;
     width: 100%;
-    display:grid;
+    display: grid;
     gap: 9.6rem;
     grid-template-columns: 1fr 1fr;
     margin-top: 3rem;
 }
 
-
-
-.intropic{
+/* Intro picture styles with width, margin, border radius, and border */
+.intropic {
     width: 100%;
     margin-bottom: 3rem;
     border-radius: 20px;
     border: 3px solid red;
-    
-    
 }
 
-.intropic2{
-
+/* Another intro picture style with different width */
+.intropic2 {
     width: 80%;
     margin-bottom: 3rem;
     border-radius: 20px;
-
 }
 
-
-.button:link, .button:visited{ 
+/* Button styles for normal and visited states */
+.button:link, .button:visited {
     text-decoration: none;
     background-color: #050505;
-    font-size:1.2rem ;
+    font-size: 1.2rem;
     color: #F5F5DC;
     padding: 1rem 2.5rem;
     border-radius: 150px;
     position: relative;
-    top:-20px;
+    top: -20px;
     transition: all 1s;
     margin-right: 0.5rem;
     border: 3px solid red;
-
 }
 
-.picintrobox2{
-
+/* Container styles for centering content */
+.picintrobox2 {
     margin-top: 2rem;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* END OF INTRO */
 
+/* Greeting card styles for flexbox centering */
 .greetingcard {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-
-.card{
-    
-        border: 3px solid red;
-        background-color: aqua;
-      
 }
 
-.cardimg{
+/* Card styles with border and background color */
+.card {
+    border: 3px solid red;
+    background-color: aqua;
+}
 
+/* Card image styles with width, border radius, and margin */
+.cardimg {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 5rem;
-
-
-
-
 }
 
 /* BUTTON */
 
-.buttonchange:hover, .buttonchange:active{
+/* Button hover and active styles */
+.buttonchange:hover, .buttonchange:active {
     text-decoration: none;
     background-color: #ffffff;
     color: #000000;
-    box-shadow: inset 0 0 0 3px white ;
+    box-shadow: inset 0 0 0 3px white;
 }
 
-/* INSTRUCTIONS*/
+/* INSTRUCTIONS */
 
+/* Instructions styles with padding and background color */
 .instructions {
-
     padding: 9px 0;
     background-color: #F5F5DC;
-
 }
 
 /* END OF BUTTON */
 
+/* REUSABLE GRID */
 
-
-
-/*  REUSABLE GRID */
-
+/* Container styles for padding, max width, and centering */
 .container {
-
     padding: 0 3.2rem;
     max-width: 120rem;
     margin: 0 auto;
-
 }
 
-.grid{
-
-display: grid;
-gap: 9rem;
-
+/* Grid styles with display and gap */
+.grid {
+    display: grid;
+    gap: 9rem;
 }
 
-.grid-2{
-
-    grid-template-columns: repeat(2,1fr);
-
+/* Grid template columns for 2-column layout */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-3{
-
-    grid-template-columns: repeat(3,1fr);
-
+/* Grid template columns for 3-column layout */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-4{
-
-    grid-template-columns: repeat(4,1fr);
-
+/* Grid template columns for 4-column layout */
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
-
-
+/* Instructions div styles with padding, font size, and color */
 .instructions div div {
-
     padding: 100px;
     font-size: 50px;
-    color:#000000;
-    /* background-color:#F78C58;*/
+    color: #000000;
 }
 
-
-.type2heading{
-
-color:red;
-letter-spacing: 1px;
-font-weight: 5.2rem;
-font-size: 3rem;
-margin: 0 auto;
-display: flex;
-justify-content: center;
-align-items: center;
-    
-}
-
-.subheading{
-
+/* Heading styles with color, letter spacing, font weight, and alignment */
+.type2heading {
+    color: red;
     letter-spacing: 1px;
     font-weight: 5.2rem;
     font-size: 3rem;
@@ -326,160 +254,154 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+/* Subheading styles similar to type2heading */
+.subheading {
+    letter-spacing: 1px;
+    font-weight: 5.2rem;
+    font-size: 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* END OF REUSABLE GRID */
 
-
 /* HOW TO SECTION */
 
-.howtoimageboc{
-
-    margin-top: 2 rem;
-
+/* How to image box styles with margin */
+.howtoimageboc {
+    margin-top: 2rem;
 }
 
+/* How to image styles with margin, width, border radius, and border */
 .howtoimg1 {
-
     margin-top: 10rem;
     width: 100%;
     border-radius: 10px;
     border: 3px solid red;
-
 }
 
-.howtoimg2{
-
+/* How to image styles with different width */
+.howtoimg2 {
     margin-top: 10rem;
     width: 150%;
     border-radius: 10px;
     border: 3px solid red;
-
 }
 
-.howtoimg3{
-
+/* How to image styles with different margin */
+.howtoimg3 {
     margin-top: -2rem;
     width: 100%;
     border-radius: 10px;
     border: 3px solid red;
-
 }
 
+/* Step description styles with font size */
 .stepdescr {
     font-size: 2rem;
-
 }
 
-
-.step{
+/* Step number styles with color and font size */
+.step {
     color: red;
-    font-size:  9rem;
+    font-size: 9rem;
 }
 
 /* END OF HOW TO SECTION */
 
-/* FOOTER*/
+/* FOOTER */
 
-.footer{
-
-padding: 1rem 0;
-background-color: red;
-
+/* Footer styles with padding and background color */
+.footer {
+    padding: 1rem 0;
+    background-color: red;
 }
 
-
-.catalog{
-
+/* Catalog footer styles with fixed positioning and width */
+.catalog {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-
 }
 
-.sociallogo{
-
+/* Social logo styles with height and display properties */
+.sociallogo {
     height: 2rem;
     display: box;
     gap: 2.4rem;
     list-style: none;
-
 }
 
-.footertitle{
-
+/* Footer title styles with font size and weight */
+.footertitle {
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
 
-
+/* Link styles for normal and visited states */
 .link:link, .link:visited {
-
     text-decoration: none;
-
 }
 
-.socials{
-
+/* Socials styles with list style and flexbox */
+.socials {
     list-style: none;
-    display:flex;
-    gap:2rem;
-
+    display: flex;
+    gap: 2rem;
 }
 
-.address{
+/* Address styles with font size */
+.address {
     font-size: 1.3rem;
 }
 
-.copyright{
-
-    font-size:1.3rem;
-
+/* Copyright styles with font size */
+.copyright {
+    font-size: 1.3rem;
 }
-
 
 /* END OF FOOTER */
 
-/* Indexcat */
+/* Index catalog */
 
-
+/* Index title styles with text alignment */
 .indextitle {
-
     text-align: center;
-
 }
 
+/* Dark mode styles with background and text color */
 .dark-mode {
     background-color: #333;
     color: #f5f5f5;
 }
 
+/* Dark mode variant styles with different colors */
 .dark-mode2 {
     background-color: #000000;
     color: #00ff55;
 }
 
-
 /* END OF INDEXCAT */
-
 
 /* CAROUSEL */
 
-.carouselimg{
-
+/* Carousel image styles with margin, height, border radius, and border */
+.carouselimg {
     margin-top: 5rem;
     height: 200px;
     border-radius: 10px;
     border: 3px solid red;
-    margin-bottom:5rem ;
-
+    margin-bottom: 5rem;
 }
 
-.carousel{
-
+/* Carousel container styles with width, height, background, margin, padding, border radius, color, and flexbox */
+.carousel {
     width: 40rem;
     height: 18rem;
     background-color: #000000;
@@ -487,20 +409,20 @@ background-color: red;
     padding: 20px;
     border-radius: 9px;
     color: #ff0000;
-
     display: flex;
-    align-items: center;    
-    gap:30px;
-
-    position:relative;
+    align-items: center;
+    gap: 30px;
+    position: relative;
 }
 
+/* Carousel image styles for fitting images within container */
 .carousel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Testimonial styles with positioning, text alignment, and color */
 .testimonial {
     position: absolute;
     top: 50%;
@@ -511,6 +433,7 @@ background-color: red;
     font-size: 24px;
 }
 
+/* Button styles for carousel navigation */
 .button {
     position: absolute;
     top: 50%;
@@ -523,16 +446,14 @@ background-color: red;
     cursor: pointer;
 }
 
+/* Left button positioning */
 .button.left {
     left: 10px;
 }
 
+/* Right button positioning */
 .button.right {
     right: 10px;
 }
 
 /* END OF CAROUSEL */
-
-
-
-
