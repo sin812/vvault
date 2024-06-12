@@ -1,4 +1,13 @@
-// Get references to DOM elements for the carousel
+//This code is using the querySelector method to get references to the DOM elements for the carousel, image, testimonial, previous button, and next button. It also defines an array of image sources and a currentIndex variable 
+//to keep track of the current image index. The showImage function displays the image based on the provided index, while the showPrevImage and showNextImage functions handle displaying the previous and next images respectively. 
+//Event listeners are added to the previous and next buttons to trigger the corresponding functions when clicked. The code also includes initial calls to show the first image and testimonial.
+//The best practice.
+
+
+
+
+
+// Get references to DOM elements for the carousel using querySelector method
 const carousel = document.querySelector('.carousel'); // Carousel container
 const carouselImg = document.querySelector('.carouselimg'); // Image element in the carousel
 const testimonial = document.querySelector('.testimonial'); // Testimonial element (assuming it's for showing text related to images)

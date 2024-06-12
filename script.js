@@ -1,5 +1,12 @@
+//This code uses the getElementById method to get references to the DOM elements for the popup overlay, popup, close button, and form submit button. 
+// It is the wrong method to use because the querySelector method is more versatile and can be used to select elements by class, tag, or attribute. Also it creates serious security issues, something to be avoided.
+
+
+
+
+ 
 document.addEventListener('DOMContentLoaded', function () {
-    // Get references to DOM elements
+// Get references to DOM elements, BAD PRACTICE
     const popupOverlay = document.getElementById('popupOverlay');
     const popup = document.getElementById('popup');
     const closePopup = document.getElementById('closePopup');
@@ -82,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to show a notification with user input details
     function showNotification() {
+        //example of a bad practice, if user input is not properly sanitized and is directly inserted into the DOM using getElementById, it can lead to XSS attacks.  
         const useremail = document.getElementById("email").value;
         const username = document.getElementById("username").value;
         const userphone = document.getElementById("phone").value;
