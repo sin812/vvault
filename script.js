@@ -1,67 +1,62 @@
 //This code uses the getElementById method to get references to the DOM elements for the popup overlay, popup, close button, and form submit button. 
-// It is the wrong method to use because the querySelector method is more versatile and can be used to select elements by class, tag, or attribute. Also it creates serious security issues, something to be avoided.
-
-
+// It is the wrong method to use because the querySelector method is more versatile and can be used to select elements by class, tag, or attribute. 
+//Also it creates serious security issues, something to be avoided.
 
 
  
 document.addEventListener('DOMContentLoaded', function () {
-// Get references to DOM elements, BAD PRACTICE
-    const popupOverlay = document.getElementById('popupOverlay');
-    const popup = document.getElementById('popup');
-    const closePopup = document.getElementById('closePopup');
+    // Get references to DOM elements, BAD PRACTICE
+    const popupOverlay = document.querySelector('#popupOverlay');
+    const popup = document.querySelector('#popup');
+    const closePopup = document.querySelector('#closePopup');
 
     // Function to open the popup
+
+    //Updated to JQuery
     function openPopup() {
-        popupOverlay.style.display = 'block'; // Display the overlay and popup
+        $('#popupOverlay').css('display', 'block');
     }
 
     // Function to close the popup
+
+    //Updated to JQuery
     function closePopupFunc() {
-        popupOverlay.style.display = 'none'; // Hide the overlay and popup
+        $('#popupOverlay').css('display', 'none');
     }
 
     // Function to store values (currently unused, but can be expanded)
     function storeValues() {
-        const albumName = document.getElementById("albname").value;
-        const yearReleased = document.getElementById("albyear").value;
-        const genre = document.getElementById("albgenre").value;
+        const albumname = $('#albname').val();
+        const yearReleased = $('#albyear').val();
+        const genre = $('#albgenre').val();
     }
 
     // Function to handle form submission
+
+    //Updated to JQuery
     function handleSubmit(event) { 
         event.preventDefault(); // Prevent the form from submitting and refreshing the page
         
         // Get input values
-        const albumName = document.getElementById("albname").value;
-        const yearReleased = document.getElementById("albyear").value;
-        const genre = document.getElementById("albgenre").value;
+        const albumname = $('#albname').val();
+        const yearReleased = $('#albyear').val();
+        const genre = $('#albgenre').val();
 
         // Create a new row in the table
-        const table = document.getElementById('table');
-        const newRow = table.insertRow();
+        const table = $('#table');
+        const newRow = $('<tr></tr>').appendTo(table);
         
         // Insert cells with input values
-        const nameCell = newRow.insertCell();
-        nameCell.textContent = albumName;
-        
-        const yearCell = newRow.insertCell();
-        yearCell.textContent = yearReleased;
-        
-        const genreCell = newRow.insertCell();
-        genreCell.textContent = genre;
+        const nameCell = $('<td></td>').text(albumname).appendTo(newRow);
+        const yearCell = $('<td></td>').text(yearReleased).appendTo(newRow);
+        const genreCell = $('<td></td>').text(genre).appendTo(newRow);
 
         // Create a delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.addEventListener('click', function() {
+        const deleteButton = $('<button></button>').text('Delete').appendTo(newRow);
+        deleteButton.on('click', function() {
             // Remove the row from the table
-            table.deleteRow(newRow.rowIndex);
+            newRow.remove();
         });
-
-        // Insert the delete button into a cell
-        const deleteCell = newRow.insertCell();
-        deleteCell.appendChild(deleteButton);
     }
 
     // Add event listener to the form submit button
@@ -73,11 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
     openPopup(); // Automatically open the popup for demonstration purposes
 
     // Close the popup when the close button is clicked
-    closePopup.addEventListener('click', closePopupFunc);
-
+    $('#closePopup').on('click', function() {
+        closePopupFunc();
+    });
+    
     // Close the popup when clicking outside the popup content
-    popupOverlay.addEventListener('click', function (event) {
-        if (event.target === popupOverlay) {
+    $('#popupOverlay').on('click', function(event) {
+        if (event.target === this) {
             closePopupFunc();
         }
     });
@@ -86,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('openPopup').addEventListener('click', function() {
         openPopup();
     });
+
+
+    //-----------------------------------------------
 
     // Function to show a notification with user input details
     function showNotification() {
@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Add event listeners to show the notification and close the popup upon form submission
+
+    //Updated to JQuery
     submitButton.addEventListener('click', showNotification);
     submitButton.addEventListener("click", closePopupFunc);
 
